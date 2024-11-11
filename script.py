@@ -91,5 +91,6 @@ async def monitor_listings(bot, chat_id, check_interval):
 if __name__ == "__main__":
     TOKEN, CHAT_ID, urls, CHECK_INTERVAL = load_config_and_urls()
     if TOKEN and CHAT_ID and urls:
-        bot = Bot(token=TOKEN)
+        request = HTTPXRequest(connect_timeout=10.0, read_timeout=10.0)
+        bot = Bot(token=TOKEN, request=request)
         asyncio.run(monitor_listings(bot, CHAT_ID, CHECK_INTERVAL))  # Run the main async function
