@@ -3,7 +3,7 @@ services:
   subito-searcher:
     build: .
     env_file:
-      - .env
+      - stack.env
     environment:
       - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
       - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
