@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from telegram import Bot
 import json
 import logging
+from telegram.request import HTTPXRequest
 
 # File to store sent URLs
 SENT_URLS_FILE = "sent_urls.json"
