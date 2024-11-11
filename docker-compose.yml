@@ -2,8 +2,10 @@ version: '3'
 services:
   subito-searcher:
     build: .
+    env_file:
+      - .env
     environment:
-      TELEGRAM_TOKEN: "YOUR_TELEGRAM_BOT_TOKEN"
-      TELEGRAM_CHAT_ID: "YOUR_TELEGRAM_CHAT_ID"
-      MONITOR_URLS: "https://www.subito.it/annunci-italia/vendita/videogiochi/?q=ps4&order=datedesc&ic=50,https://www.subito.it/annunci-italia/vendita/videogiochi/?q=nintendo+switch&shp=true&order=datedesc&ic=50"
-      CHECK_INTERVAL: "60"
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - MONITOR_URLS=${MONITOR_URLS}
+      - CHECK_INTERVAL=${CHECK_INTERVAL}
