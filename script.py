@@ -45,7 +45,7 @@ def save_sent_urls(sent_urls):
 
 # Function to send messages on Telegram
 async def send_telegram_message(bot, chat_id, message):
-    await asyncio.sleep(5)
+    await asyncio.sleep(6)
     await bot.send_message(chat_id=chat_id, text=message)
 
 # Function to get new listings
